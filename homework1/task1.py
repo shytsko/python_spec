@@ -8,7 +8,7 @@ side_a = int(input("Введите сторону a: "))
 side_b = int(input("Введите сторону b: "))
 side_c = int(input("Введите сторону c: "))
 
-if side_a + side_b <= side_c or  side_a + side_c <= side_b or side_b + side_c <= side_a:
+if side_a + side_b <= side_c or side_a + side_c <= side_b or side_b + side_c <= side_a:
     print("Такой треугольник не существует")
 elif side_a == side_b and side_b == side_c:
     print("Это равносторонний треугольник")
