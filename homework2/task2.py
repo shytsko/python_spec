@@ -16,8 +16,10 @@ def fraction_to_str(fraction: tuple) -> str:
 
 
 def addition_fraction(fraction1: tuple, fraction2: tuple) -> tuple:
-    lcm = math.lcm(fraction1[1], fraction2[1])
-    return fraction1[0] * (lcm // fraction1[1]) + fraction2[0] * (lcm // fraction2[1]), lcm
+    numerator = fraction1[0] * fraction2[1] + fraction2[0] * fraction1[1]
+    denominator = fraction1[1] * fraction2[1]
+    gcd = math.gcd(numerator, denominator)
+    return numerator // gcd, denominator // gcd
 
 
 def multiplication_fractions(fraction1: tuple, fraction2: tuple) -> tuple:
