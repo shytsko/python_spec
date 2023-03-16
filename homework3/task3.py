@@ -3,47 +3,35 @@
 # Достаточно вернуть один допустимый вариант.
 # *Верните все возможные варианты комплектации рюкзака.
 
+MAX_WEIGHT = 10
 
-things = ["фонарик", "спички", "котелок", "топор", "нож", "компас"]
-
-
-def get_permutations(sequence):
-    """
-    Получает все возможные перестановки элементов заданной последовантельности
-    Источники:
-    https://ru.wikipedia.org/wiki/%D0%90%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC_%D0%9D%D0%B0%D1%80%D0%B0%D0%B9%D0%B0%D0%BD%D1%8B
-    https://prog-cpp.ru/permutation/
-    :param sequence: исходная последовательность
-    :return: список возможных перестановок
-    """
-    current_set = sorted(sequence)
-
-    permutations = [current_set.copy()]
-    end = False
-    while not end:
-        j = len(sequence) - 2
-        while j != -1 and current_set[j] >= current_set[j + 1]:
-            j -= 1
-        if j != -1:
-            k = len(sequence) - 1
-            while current_set[j] >= current_set[k]:
-                k -= 1
-            current_set[j], current_set[k] = current_set[k], current_set[j]
-            left = j + 1
-            right = len(sequence) - 1
-            while left < right:
-                current_set[left], current_set[right] = current_set[right], current_set[left]
-                left += 1
-                right -= 1
-            permutations.append(current_set.copy())
-        else:
-            end = True
-    return permutations
+things = {"фонарик": 1.0, "спички": 0.5, "котелок": 2.0, "топор": 1.0, "нож": 0.5, "компас": 0.5, "вода": 3.0,
+          "лодка": 7.0, "палатка": 5.0, "еда": 2.0}
 
 
-permutations = get_permutations(things)
+def get_all_set(things_set: dict[str, float], max_backpack_weight: float):
+    things_list = list(enumerate(things_set.keys()))
+    number_combinations = 2 ** len(things_list)
+    valid_combinations = {}
 
-for p in permutations:
-    print(p)
+    for comb in range(1, number_combinations):
+        combination_bin = f"{bin(comb).replace('0b', ''):0>{len(things_list)}}"[::-1]
+        current_set = frozenset({thing[1] for thing in things_list if combination_bin[thing[0]] == '1'})
+        current_set_weight = sum([things_set[thing] for thing in current_set])
+        if current_set_weight <= max_backpack_weight:
+            valid_combinations[current_set] = current_set_weight
 
-print(len(permutations))
+    return valid_combinations
+
+
+combinations = get_all_set(things, MAX_WEIGHT)
+print("Возможные варианты комплектования рюкзака:")
+for combination, weight in combinations.items():
+    print(f"{combination}: масса {weight}")
+
+optimal_combinations = {combination: weight for combination, weight in combinations.items() if
+                        weight == max(combinations.values())}
+
+print("\n------------------\nОптимальные варианты комплектования рюкзака:")
+for combination, weight in optimal_combinations.items():
+    print(f"{combination}: масса {weight}")
