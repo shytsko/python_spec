@@ -9,14 +9,8 @@ test_matrix = [[1, 2, 3, 4, 5],
 
 
 def transpose_matrix(matrix: list[list[int]]) -> list[list[int]]:
-    matrix_size = len(matrix)
-
-    if any(map(lambda x: len(x) != matrix_size, matrix)):
-        return False
-
     new_rows_from_columns = zip(*matrix)
     return list(new_rows_from_columns)
-
 
 
 def print_matrix(matrix: list[list[int]]):
