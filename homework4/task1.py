@@ -8,15 +8,15 @@ test_matrix = [[1, 2, 3, 4, 5],
                [20, 21, 22, 23, 24]]
 
 
-def transpose_matrix(matrix: list[list[int]]) -> bool:
+def transpose_matrix(matrix: list[list[int]]) -> list[list[int]]:
     matrix_size = len(matrix)
 
     if any(map(lambda x: len(x) != matrix_size, matrix)):
         return False
 
-    for i in range(1, matrix_size):
-        for j in range(0, i):
-            matrix[i][j], matrix[j][i] = matrix[j][i], matrix[i][j]
+    new_rows_from_columns = zip(*matrix)
+    return list(new_rows_from_columns)
+
 
 
 def print_matrix(matrix: list[list[int]]):
@@ -28,6 +28,6 @@ def print_matrix(matrix: list[list[int]]):
 
 print("Исходная матрица")
 print_matrix(test_matrix)
-transpose_matrix(test_matrix)
+matrix_transposed = transpose_matrix(test_matrix)
 print("\nТранспонированная матрица")
-print_matrix(test_matrix)
+print_matrix(matrix_transposed)
