@@ -2,6 +2,7 @@ from random import randint
 
 __all__ = ["guess_number", "riddles", "riddles_all", "view_result"]
 
+
 def guess_number(lower_limit: int, upper_limit: int = 1000, attempt_available: int = 10) -> bool:
     secret_number = randint(lower_limit, upper_limit)
     attempts_left = attempt_available

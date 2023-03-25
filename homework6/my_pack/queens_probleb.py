@@ -1,4 +1,7 @@
-__all__ = ["check_queens_solution", "view_queens_solution"]
+import random
+from random import sample
+
+__all__ = ["check_queens_solution", "view_queens_solution", "get_random_queens_set"]
 
 _N = 8
 _EMPTY = 0
@@ -30,3 +33,10 @@ def view_queens_solution(coordinates: set[tuple[int, int]]) -> None:
         board[row][col] = '♕'
 
     print('\n'.join((''.join(row) for row in board)))
+
+
+def get_random_queens_set() -> set[tuple[int, int]]:
+    foo = [x for x in range(_N)]
+    rows = random.sample(foo, len(foo))
+    columns = random.sample(foo, len(foo))
+    return set(zip(rows, columns))
