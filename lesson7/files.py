@@ -26,3 +26,10 @@
 # ):
 #     print(*list(f1))
 #     print(*list(f2))
+
+with open("index.html", "r+", encoding='utf-8') as f:
+    while res := f.readline():
+        print("---------------")
+        print(res)
+        print(f.tell())
+
