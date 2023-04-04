@@ -1,9 +1,9 @@
 "name","parent","type","size"
-"D:\Documents\GB\python_spec","D:\Documents\GB","dir",131651675
+"D:\Documents\GB\python_spec",D:\Documents\GB,"dir",131651675
 "D:\Documents\GB\python_spec\.git","D:\Documents\GB\python_spec","dir",180506
 "D:\Documents\GB\python_spec\.git\COMMIT_EDITMSG","D:\Documents\GB\python_spec\.git","file",17
 "D:\Documents\GB\python_spec\.git\config","D:\Documents\GB\python_spec\.git","file",367
-"D:\Documents\GB\python_spec\.git\description","D:\Documents\GB\python_spec\.git","file",73
+D:\Documents\GB\python_spec\.git\description,"D:\Documents\GB\python_spec\.git","file",73
 "D:\Documents\GB\python_spec\.git\FETCH_HEAD","D:\Documents\GB\python_spec\.git","file",213
 "D:\Documents\GB\python_spec\.git\HEAD","D:\Documents\GB\python_spec\.git","file",25
 "D:\Documents\GB\python_spec\.git\hooks","D:\Documents\GB\python_spec\.git","dir",23442
@@ -10265,5 +10265,6 @@
 "D:\Documents\GB\python_spec\venv\Scripts\pythonw.exe","D:\Documents\GB\python_spec\venv\Scripts","file",256376
 "D:\Documents\GB\python_spec\venv\Scripts\wheel-3.11.exe","D:\Documents\GB\python_spec\venv\Scripts","file",108397
 "D:\Documents\GB\python_spec\venv\Scripts\wheel.exe","D:\Documents\GB\python_spec\venv\Scripts","file",108397
-"D:\Documents\GB\python_spec\venv\Scripts\wheel3.11.exe","D:\Documents\GB\python_spec\venv\Scripts","file",108397
-"D:\Documents\GB\python_spec\venv\Scripts\wheel3.exe","D:\Documents\GB\python_spec\venv\Scripts","file",108397
+"D:\Documents\GB\python_spec\venv\Scripts\wheel3.11.exe",D:\Documents\GB\python_spec\venv\Scripts,"file",108397
+D:\Documents\GB\python_spec\venv\Scripts\wheel3.exe,D:\Documents\GB\python_spec\venv\Scripts,"file",108397
+,
