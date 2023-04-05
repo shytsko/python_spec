@@ -9,6 +9,7 @@ import csv
 import json
 from pathlib import Path
 from random import randint
+from task2 import game, guessing
 
 MIN_ROWS = 100
 MAX_ROWS = 1000
@@ -69,3 +70,17 @@ def quadratic_equation_solution(a, b, c):
 
 if __name__ == '__main__':
     print(quadratic_equation_solution(4, 6, 0))
+
+    game.riddles_all()
+
+    game = guessing.guessing_game(555, 5)
+    while True:
+        num = int(input("Введите число: "))
+        res, tries = game(num)
+        if res:
+            print("Вы угадали!!")
+            break
+        if tries == 0:
+            print("Попыток больше нет")
+            break
+        print(f"Осталось попыток: {tries}")
