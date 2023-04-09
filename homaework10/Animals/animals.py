@@ -4,7 +4,8 @@
 # Для каждого кла.
 from enum import Enum
 
-__all__ = ["Cat", "Dog", "Fish"]
+__all__ = ["Cat", "Dog", "Fish", "Animal"]
+
 
 class Animal:
     def __init__(self, species: str, name: str, age: str):
@@ -17,8 +18,9 @@ class Animal:
 
 
 class Cat(Animal):
+    __species = "кот"
     def __init__(self, name: str, age: str, color: str):
-        super().__init__("кот", name, age)
+        super().__init__(self.__species, name, age)
         self._color = color
 
     def __str__(self):
@@ -26,8 +28,9 @@ class Cat(Animal):
 
 
 class Dog(Animal):
+    __species = "собака"
     def __init__(self, name: str, age: str, angry: bool):
-        super().__init__("собака", name, age)
+        super().__init__(self.__species, name, age)
         self._angry = angry
 
     def __str__(self):
@@ -39,8 +42,9 @@ class Fish(Animal):
         SEA_FISH = "морская"
         FRESHWATER_FISH = "пресноводная"
 
+    __species = "рыба"
     def __init__(self, name: str, age: str, fish_type: TypeFish):
-        super().__init__("рыба", name, age)
+        super().__init__(self.__species, name, age)
         self._type = fish_type
 
     def __str__(self):
