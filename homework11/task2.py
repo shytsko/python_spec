@@ -20,7 +20,14 @@ class Matrix:
     def __add__(self, other):
         if self._rows_count != other._rows_count or self._columns_count != other._columns_count:
             raise ArithmeticError("Мatrix sizes are not equal.")
-        return Matrix([list(map(sum, zip(self._data[i], other._data[i]))) for i in range(self._rows_count)])
+        return Matrix([[sum(x) for x in zip(self._data[i], other._data[i])] for i in range(self._rows_count)])
+
+    def __mul__(self, other):
+        if self._columns_count != other._rows_count:
+            raise ArithmeticError(
+                "The number of columns of the first matrix must be equal to the number of rows of the second matrix.")
+
+        return Matrix([[sum(map(lambda x: x[0] * x[1], zip(r, c))) for c in zip(*other._data)] for r in self._data])
 
 
 if __name__ == '__main__':
@@ -47,3 +54,16 @@ if __name__ == '__main__':
 
     sum_matrix = matrix1 + matrix3
     print(f"sum_matrix = matrix1 + matrix3\n{sum_matrix}\n")
+
+    matrix5 = Matrix([[1, -1],
+                      [2, 0],
+                      [3, 0]])
+
+    matrix6 = Matrix([[1, 1, -1, 4],
+                      [2, 0, 1, 6]])
+
+    print(f"matrix5=\n{matrix5}\n")
+    print(f"matrix6=\n{matrix6}\n")
+    mul_matrix = matrix5 * matrix6
+    print(f"mul_matrix = matrix5 + matrix6\n{mul_matrix}\n")
+
