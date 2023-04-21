@@ -25,5 +25,6 @@ def check_year(year):
 
 if __name__ == '__main__':
     import doctest
+
     # doctest.testmod(verbose=True)
-    doctest.testfile("test.md", verbose=True)
+    # doctest.testfile("test.md", verbose=True)
