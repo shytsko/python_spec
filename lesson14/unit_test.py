@@ -16,8 +16,8 @@ class TestCheckYear(unittest.TestCase):
 
     def test_type(self):
         with self.assertRaises(TypeError):
-            check_year("1200")
-            check_year(1200.0)
+            x = check_year("1200")
+            # x = check_year(1200.0)
 
 
 if __name__ == '__main__':
