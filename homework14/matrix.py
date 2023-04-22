@@ -4,7 +4,7 @@
 # ○ сравнения,
 # ○ сложения,
 # ○ *умножения матриц
-from Exceptions import IncorrectMatrixSize
+from exceptions import IncorrectMatrixSize
 
 
 class Matrix:
