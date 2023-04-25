@@ -1,0 +1,15 @@
+INFO    :2023-04-25 19:39:41,295:__main__:023:wrapper:args=(1, 2, 3):kwargs={}:res=555
+INFO    :2023-04-25 19:39:41,295:__main__:023:wrapper:args=(1,):kwargs={'n3': 2, 'n2': 3}:res=555
+INFO    :2023-04-25 19:39:41,295:__main__:023:wrapper:args=('dbgdfhf', (0, 0, 0, 0), 2453):kwargs={'arg1': 1, 'arg2': 2}:res=777
+INFO    :2023-04-25 19:43:41,138:__main__:023:wrapper:args=(1, 2, 3):kwargs={}:res=555
+INFO    :2023-04-25 19:43:41,138:__main__:023:wrapper:args=(1,):kwargs={'n3': 2, 'n2': 3}:res=555
+INFO    :2023-04-25 19:43:41,138:__main__:023:wrapper:args=('dbgdfhf', (0, 0, 0, 0), 2453):kwargs={'arg1': 1, 'arg2': 2}:res=777
+INFO    :2023-04-25 19:43:49,502:__main__:023:wrapper:args=(1, 2, 3):kwargs={}:res=555
+INFO    :2023-04-25 19:43:49,502:__main__:023:wrapper:args=(1,):kwargs={'n3': 2, 'n2': 3}:res=555
+INFO    :2023-04-25 19:43:49,503:__main__:023:wrapper:args=('dbgdfhf', (0, 0, 0, 0), 2453):kwargs={'arg1': 1, 'arg2': 2}:res=777
+INFO    :2023-04-25 19:43:57,715:__main__:023:wrapper:args=(1, 2, 3):kwargs={}:res=555
+INFO    :2023-04-25 19:43:57,715:__main__:023:wrapper:args=(1,):kwargs={'n3': 2, 'n2': 3}:res=555
+INFO    :2023-04-25 19:43:57,715:__main__:023:wrapper:args=('dbgdfhf', (0, 0, 0, 0), 2453):kwargs={'arg1': 1, 'arg2': 2}:res=777
+INFO    :2023-04-25 19:44:45,656:__main__:023:fun1:args=(1, 2, 3):kwargs={}:res=555
+INFO    :2023-04-25 19:44:45,657:__main__:023:fun1:args=(1,):kwargs={'n3': 2, 'n2': 3}:res=555
+INFO    :2023-04-25 19:44:45,657:__main__:023:fun2:args=('dbgdfhf', (0, 0, 0, 0), 2453):kwargs={'arg1': 1, 'arg2': 2}:res=777
