@@ -1,0 +1,2 @@
+INFO:__main__:Переданы параметры: Namespace(path=WindowsPath('files'), e=[['jpg', '3'], ['png', 'ff'], ['data', '10']])
+ERROR:__main__:Ошибка в параметрах
